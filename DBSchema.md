@@ -4,8 +4,8 @@ CREATE KEYSPACE SeetiTel with replication=('class':'SimpleStrategy', 'replicatio
 
 CREATE TABLE IF NOT EXISTS whistle(
   id uuid PRIMARY KEY,
-  created int,
-  type text,
+  created timestamp,
+  type int,
   encrypted int,
   value text
 );
