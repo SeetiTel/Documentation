@@ -121,19 +121,16 @@ Parameter  | Description
 This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an audio whistle.
 
 ### Delete Single Whistle
-Deletes the given whistle, including audio, if applicable.
+Deletes all given whistles.
 
 #### Query
 
-`DELETE whistle/{id}/{secret}`
+`DELETE whistles`
 
-Parameter  | Description
-------------- | -------------
-`id`  | unique ID of the desired whistle
-`secret` | secret password to allow deletion
+(Requires Basic Auth)
 
 #### Result
-This endpoint will return HTTP 404 if there is no such whistle. It will return 204 upon successful deletion.
+It will return 204 upon successful deletion.
 
 ## Status
 
