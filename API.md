@@ -13,12 +13,11 @@ Returns whistles, from most to least recent.
 
 #### Query
 
-`GET whistles/list/{offset}/{count}`
+`GET whistles/list/{offset}`
 
 Parameter  | Description
 ------------- | -------------
-`offset`  | number of records to skip before collecting
-`count`  | number of recent whistles to retrieve, starting at the `offset`th record
+`offset`  | unique ID of the last result of the last set you got
 
 #### Result
 ```JSON
@@ -140,30 +139,16 @@ This endpoint will return HTTP 404 if there is no such whistle. It will return 2
 
 ### Get API status
 
-Returns API uptime
+Returns API uptime & DB status
 
 #### Query
 
-`GET status/infrastructure`
+`GET status`
 
 #### Result
 {
-    "message": "API has been running since Mon Apr 13 2015 20:09:03 GMT-0700 (Pacific Daylight Time)"
-}
-
-This endpoint will return 200 if all is well.
-
-### Get DB status
-
-Returns DB rowcount
-
-#### Query
-
-`GET status/db`
-
-#### Result
-{
-    "message": "DB is up with 94 rows"
+    "infrastructure": "API has been running since Mon Apr 13 2015 23:10:37 GMT-0700 (Pacific Daylight Time)",
+    "db": "DB is up with 0 rows."
 }
 
 This endpoint will return 200 if all is well, and 500 if there is an error.
