@@ -27,14 +27,14 @@ Parameter  | Description
     "id": "2564",
     "created": "1428974705",
     "type": "1",
-    "encrypted": 0,
+    "encrypted": false,
     "teaser": "This is an audio whistle."
   },
   {
     "id": "2565",
     "created": "1428974605",
     "type": "0",
-    "encrypted": 0,
+    "encrypted": false,
     "teaser": "This is the first 40 characters of the whistle."
   }
 ]
@@ -44,11 +44,11 @@ The results are permitted to return fewer than the requested record count.
 
 Parameter  | Description
 ------------- | -------------
-`id`  | unique whistle ID; can be used for direct lookup
-`created`  | UNIX timestamp of the creation date in UTC time
-`type`  | `0` for text, `1` for audio
-`encrypted`  | `1` or `0` to indicate that the leak is encrypted with AES-128
-`teaser`  | the first 40 characters of the whistle, or a sentence explaining that the whistle is audio-based.
+`id`  | UUIDv4; unique whistle ID - can be used for direct lookup
+`created`  | UNIX timestamp; creation date in UTC time WITH MILLISECONDS
+`type`  | int; `0` for text, `1` for audio
+`encrypted`  | bool; if true, indicates that the leak is encrypted with AES-128
+`teaser`  | string; the first 40 characters of the whistle, or a sentence explaining that the whistle is audio-based.
 
 This endpoint will return HTTP 410 (`GONE`) if there are no more records to be displayed.
 
