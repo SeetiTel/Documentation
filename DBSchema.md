@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS whistle(
   id uuid PRIMARY KEY,
   created timestamp,
   type int,
-  encrypted bool,
+  encrypted boolean,
   value text
 );
 
