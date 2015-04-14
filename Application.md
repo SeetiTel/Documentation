@@ -8,7 +8,8 @@ Many in the Western world see SMS and voice interaction as last-generation, larg
 # Mechanics
 
 SMS Whistle
-  * Can be immediate release, encrypted release
+  * Immediate release
+  * Optionally encrypted
   * Encryption will return a leak ID and a key, the key being a 128 digit
   * Whistles can be looked up by key, or clicked from the Recent Leaks area
 
