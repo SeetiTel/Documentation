@@ -144,7 +144,7 @@ Returns API uptime
 
 #### Query
 
-`GET status`
+`GET status/infrastructure`
 
 #### Result
 {
@@ -152,3 +152,18 @@ Returns API uptime
 }
 
 This endpoint will return 200 if all is well.
+
+### Get DB status
+
+Returns DB rowcount
+
+#### Query
+
+`GET status/db`
+
+#### Result
+{
+    "message": "DB is up with 94 rows"
+}
+
+This endpoint will return 200 if all is well, and 500 if there is an error.
