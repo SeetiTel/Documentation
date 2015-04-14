@@ -13,7 +13,7 @@ Returns whistles, from most to least recent.
 
 #### Query
 
-`GET whistles/list/{offset}`
+`GET whistles/{offset}`
 
 Parameter  | Description
 ------------- | -------------
