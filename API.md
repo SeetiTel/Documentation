@@ -135,3 +135,20 @@ Parameter  | Description
 
 #### Result
 This endpoint will return HTTP 404 if there is no such whistle. It will return 204 upon successful deletion.
+
+## Status
+
+### Get API status
+
+Returns API uptime
+
+#### Query
+
+`GET status`
+
+#### Result
+{
+    "message": "API has been running since Mon Apr 13 2015 20:09:03 GMT-0700 (Pacific Daylight Time)"
+}
+
+This endpoint will return 200 if all is well.
