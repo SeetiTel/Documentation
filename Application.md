@@ -17,6 +17,8 @@ Voice Whistle
   * Immediate release only
   * ID is verbally returned over the phone
 
+The application will be built on node.js and express, with an Apache Cassandra database for data storage to allow for distributed resilience to possible takedown attempts.
+
 # Interfaces
 
-SeetiTel will have a backend API written with node.js and express. Frontend access will be through a responsive web interface, android application, and iOS application, as well as possible browser extensions. Actual leaks will be made through the Twilio API.
+SeetiTel will have a backend API. Frontend access will be through a responsive web interface, possibly utilizing ReactJS, android application, and iOS application, as well as possible browser extensions. Actual leaks will be made through the Twilio API.
