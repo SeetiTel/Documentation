@@ -120,6 +120,23 @@ Parameter  | Description
 
 This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an audio whistle.
 
+## Maintenance
+
+### Add demo row
+
+Adds a demo row with dummy data
+
+#### Query
+
+`POST whistle/demo`
+
+#### Result
+{
+    "message": "Demo entry added."
+}
+
+This endpoint will return 200 if all is well, and 500 if there is an error.
+
 ### Delete Single Whistle
 Deletes all given whistles.
 
@@ -131,8 +148,6 @@ Deletes all given whistles.
 
 #### Result
 It will return 204 upon successful deletion.
-
-## Status
 
 ### Get API status
 
