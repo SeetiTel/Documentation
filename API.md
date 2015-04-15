@@ -87,7 +87,7 @@ Parameter  | Description
     "created": "1428974705",
     "type": "1",
     "encrypted": 0,
-    "content": "This is an audio whistle."
+    "content": "/data/ba67de8f40abebd6.mp3"
 }
 ```
 
@@ -97,43 +97,9 @@ Parameter  | Description
 `created`  | UNIX timestamp of the creation date in UTC time
 `type`  | `audio` or `text`
 `encrypted`  | `1` or `0` to indicate that the leak is encrypted with AES-128
-`content`  | if the leak is text, the full text of the leak. If the leak is audio, this will be NULL.
+`content`  | if the leak is text, the full text of the leak. If the leak is audio or an image, this will be the URL that the data is accessible at.
 
 This endpoint will return HTTP 404 if there is no such whistle.
-
-### Get Whistle's Audio Content
-
-Returns the MP3 of a given audio whistle
-
-#### Query
-
-`GET whistle/{id}/audio`
-
-Parameter  | Description
-------------- | -------------
-`id`  | unique ID of the desired audio whistle
-
-#### Result
-`[binary MP3 data]`
-
-This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an audio whistle.
-
-### Get Whistle's Images Content
-
-Returns an image file of a given audio whistle
-
-#### Query
-
-`GET whistle/{id}/image`
-
-Parameter  | Description
-------------- | -------------
-`id`  | unique ID of the desired audio whistle
-
-#### Result
-`[binary image data]`
-
-This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an image whistle.
 
 ## Maintenance
 
