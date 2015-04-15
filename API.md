@@ -4,6 +4,39 @@ The SeetiTel API is a RESTful API, and is designed to use standardized resource 
 
 **All endpoints referenced have the following base: https://seeti.tel/api/v1/**
 
+## Quick Reference
+
+Request  | Description
+------------- | -------------
+`GET /whistles/{offset}`  | Returns an array of teasers starting after the given id (`offset`)
+`GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given string (`phrase`)
+`GET /whistle/{id}`  | Returns a full whistle with the given id (`id`)
+`POST /whistle/demo`  | Creates a single test whistle
+`GET /status`  | Returns a DB and API status report
+`DELETE /whistles`  | Flushes all whistles.
+
+**Whistle teaser format:**
+```JSON
+{
+	"id": 2564,
+	"created": 1428974705,
+	"type": 1,
+	"encrypted": false,
+	"teaser": "This is an audio whistle."
+}
+```
+
+**Full whistle format:**
+```JSON
+{
+    "id": 2564,
+    "created": 1428974705,
+    "type": 1,
+    "encrypted": false,
+    "content": "/data/ba67de8f40abebd6.mp3"
+}
+```
+
 
 ## Multiple Whistles & Search
 
@@ -23,16 +56,16 @@ Parameter  | Description
 ```JSON
 [
   {
-    "id": "2564",
-    "created": "1428974705",
-    "type": "1",
+    "id": 2564,
+    "created": 1428974705,
+    "type": 1,
     "encrypted": false,
     "teaser": "This is an audio whistle."
   },
   {
-    "id": "2565",
-    "created": "1428974605",
-    "type": "0",
+    "id": 2565,
+    "created": 1428974605,
+    "type": 0,
     "encrypted": false,
     "teaser": "This is the first 40 characters of the whistle."
   }
@@ -83,20 +116,20 @@ Parameter  | Description
 #### Result
 ```JSON
 {
-    "id": "2564",
-    "created": "1428974705",
-    "type": "1",
-    "encrypted": 0,
+    "id": 2564,
+    "created": 1428974705,
+    "type": 1,
+    "encrypted": false,
     "content": "/data/ba67de8f40abebd6.mp3"
 }
 ```
 
 Parameter  | Description
 ------------- | -------------
-`id`  | unique whistle ID; can be used for direct lookup
-`created`  | UNIX timestamp of the creation date in UTC time
-`type`  | `audio` or `text`
-`encrypted`  | `1` or `0` to indicate that the leak is encrypted with AES-128
+`id`  | UUIDv4; unique whistle ID - can be used for direct lookup
+`created`  | UNIX timestamp; creation date in UTC time WITH MILLISECONDS
+`type`  | int; `0` for text, `1` for audio, `2` for graphic
+`encrypted`  | bool; if true, indicates that the leak is encrypted with AES-128
 `content`  | if the leak is text, the full text of the leak. If the leak is audio or an image, this will be the URL that the data is accessible at.
 
 This endpoint will return HTTP 404 if there is no such whistle.
@@ -112,9 +145,11 @@ Adds a demo row with dummy data
 `POST whistle/demo`
 
 #### Result
+```JSON
 {
     "message": "Demo entry added."
 }
+```
 
 This endpoint will return 200 if all is well, and 500 if there is an error.
 
