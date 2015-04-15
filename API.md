@@ -56,13 +56,11 @@ Returns whistles that contain a given phrase, sorted from most to least recent.
 
 #### Query
 
-`GET whistles/search/{phrase}/{offset}/{count}`
+`GET whistles/search/{phrase}`
 
 Parameter  | Description
 ------------- | -------------
 `phrase`  | string that will be searched for
-`offset`  | number of records to skip before collecting
-`count`  | number of recent whistles to retrieve, starting at the `offset`th record
 
 #### Result
 
