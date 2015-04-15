@@ -11,10 +11,13 @@ SMS Whistle
   * Immediate release
   * Optionally encrypted
   * Encryption will return a leak ID and a key, the key being a 128 digit
-  * Whistles can be looked up by key, or clicked from the Recent Leaks area
+  * Whistles can be looked up by ID, or clicked from the Recent Leaks area
+
+Image Whistle
+  * Immediate release
+  * Whistles can be looked up by ID, or clicked from the Recent Leaks area
 
 Voice Whistle
-  * Immediate release only
   * ID is verbally returned over the phone
 
 The application will be built on node.js and express, with an Apache Cassandra database for data storage to allow for distributed resilience to possible takedown attempts.
