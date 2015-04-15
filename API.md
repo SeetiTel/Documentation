@@ -45,9 +45,9 @@ Parameter  | Description
 ------------- | -------------
 `id`  | UUIDv4; unique whistle ID - can be used for direct lookup
 `created`  | UNIX timestamp; creation date in UTC time WITH MILLISECONDS
-`type`  | int; `0` for text, `1` for audio
+`type`  | int; `0` for text, `1` for audio, `2` for graphic
 `encrypted`  | bool; if true, indicates that the leak is encrypted with AES-128
-`teaser`  | string; the first 40 characters of the whistle, or a sentence explaining that the whistle is audio-based.
+`teaser`  | string; the first 40 characters of the whistle, or a sentence explaining that the whistle is audio or image based.
 
 This endpoint will return HTTP 410 (`GONE`) if there are no more records to be displayed.
 
@@ -119,6 +119,23 @@ Parameter  | Description
 `[binary MP3 data]`
 
 This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an audio whistle.
+
+### Get Whistle's Images Content
+
+Returns an image file of a given audio whistle
+
+#### Query
+
+`GET whistle/{id}/image`
+
+Parameter  | Description
+------------- | -------------
+`id`  | unique ID of the desired audio whistle
+
+#### Result
+`[binary image data]`
+
+This endpoint will return HTTP 404 if there is no such whistle, and 400 if the requested whistle is not an image whistle.
 
 ## Maintenance
 
