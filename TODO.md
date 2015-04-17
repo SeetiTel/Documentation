@@ -12,4 +12,3 @@
 
 * Complete API endpoints
 * Twilio integration
-* Testing
