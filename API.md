@@ -8,7 +8,7 @@ The SeetiTel API is a RESTful API, and is designed to use standardized resource 
 
 Request  | Description
 ------------- | -------------
-`GET /whistles/{offset}`  | Returns an array of teasers starting after the given id (`offset`)
+`GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given string (`phrase`)
 `GET /whistle/{id}`  | Returns a full whistle with the given id (`id`)
 `POST /whistle/demo`  | Creates a single test whistle
@@ -42,7 +42,7 @@ Request  | Description
 
 ### Recent Whistles
 
-Returns whistles, from most to least recent.
+Returns an array of 25 whistles, from most to least recent.
 
 #### Query
 
@@ -50,7 +50,7 @@ Returns whistles, from most to least recent.
 
 Parameter  | Description
 ------------- | -------------
-`offset`  | unique ID of the last result of the last set you got
+`offset`  | number of results to skip
 
 #### Result
 ```JSON
