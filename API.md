@@ -9,8 +9,8 @@ The SeetiTel API is a RESTful API, and is designed to use standardized resource 
 Request  | Description
 ------------- | -------------
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
-`GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given string (`phrase`)
-`GET /whistle/{id}`  | Returns a full whistle with the given id (`id`)
+`GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given `phrase`
+`GET /whistle/{id}`  | Returns a full whistle with the given `id`
 `POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
