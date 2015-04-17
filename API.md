@@ -97,7 +97,7 @@ Parameter  | Description
 
 #### Result
 
-*See `Recent Whistles`*
+*See `Recent Whistles`*. Returns `410 GONE` if there are no matching records.
 
 ## Single Whistles
 
