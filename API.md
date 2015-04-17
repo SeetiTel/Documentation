@@ -11,7 +11,7 @@ Request  | Description
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given string (`phrase`)
 `GET /whistle/{id}`  | Returns a full whistle with the given id (`id`)
-`POST /whistle/demo/{content}`  | Creates a single test whistle with the optionally provided `content`
+`POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
@@ -142,7 +142,11 @@ Adds a demo row with dummy data
 
 #### Query
 
-`POST whistle/demo`
+`POST whistle/demo/{type}`
+
+Parameter  | Description
+------------- | -------------
+`type`  | type of entry. `1` for unencrypted text, `2` for encrypted text with the key of 128 zeroes, `3` for graphic, `4` for audio
 
 #### Result
 ```JSON
@@ -153,7 +157,7 @@ Adds a demo row with dummy data
 
 This endpoint will return 200 if all is well, and 500 if there is an error.
 
-### Delete Single Whistle
+### Delete Whistles
 Deletes all given whistles.
 
 #### Query
