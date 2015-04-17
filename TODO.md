@@ -12,5 +12,4 @@
 
 * Complete API endpoints
 * Twilio integration
-* SSL integration
-* Twitter webhook integration
+* Testing
