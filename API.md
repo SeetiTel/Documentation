@@ -11,7 +11,7 @@ Request  | Description
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given string (`phrase`)
 `GET /whistle/{id}`  | Returns a full whistle with the given id (`id`)
-`POST /whistle/demo`  | Creates a single test whistle
+`POST /whistle/demo/{content}`  | Creates a single test whistle with the optionally provided `content`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
