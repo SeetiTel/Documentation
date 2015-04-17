@@ -178,9 +178,11 @@ Returns API uptime & DB status
 `GET status`
 
 #### Result
+```JSON
 {
     "infrastructure": "API has been running since Mon Apr 13 2015 23:10:37 GMT-0700 (Pacific Daylight Time)",
     "db": "DB is up with 0 rows."
 }
+```
 
 This endpoint will return 200 if all is well, and 500 if there is an error.
