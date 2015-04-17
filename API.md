@@ -37,7 +37,6 @@ Request  | Description
 }
 ```
 
-
 ## Multiple Whistles & Search
 
 ### Recent Whistles
@@ -146,7 +145,7 @@ Adds a demo row with dummy data
 
 Parameter  | Description
 ------------- | -------------
-`type`  | type of entry. `1` for unencrypted text, `2` for encrypted text with the key of 128 zeroes, `3` for audio, `4` for graphic. If none is specified, `1` is the default.
+`type`  | type of entry. `1` for unencrypted text, `2` for encrypted text with the key of 8 zeroes, `3` for audio, `4` for graphic. If none is specified, `1` is the default.
 
 #### Result
 ```JSON
