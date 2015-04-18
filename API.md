@@ -57,13 +57,14 @@ Parameter  | Description
     "created": 1428974705,
     "type": 1,
     "teaser": "This is an audio whistle."
-  },e
+  },
   {
     "id": 2565,
     "created": 1428974605,
     "type": 0,
     "teaser": "This is the first 40 characters of the whistle."
-  }
+  },
+  {...}
 ]
 ```
 
