@@ -21,7 +21,6 @@ Request  | Description
 	"id": 2564,
 	"created": 1428974705,
 	"type": 1,
-	"encrypted": false,
 	"teaser": "This is an audio whistle."
 }
 ```
@@ -32,7 +31,6 @@ Request  | Description
     "id": 2564,
     "created": 1428974705,
     "type": 1,
-    "encrypted": false,
     "content": "/data/ba67de8f40abebd6.mp3"
 }
 ```
@@ -58,14 +56,12 @@ Parameter  | Description
     "id": 2564,
     "created": 1428974705,
     "type": 1,
-    "encrypted": false,
     "teaser": "This is an audio whistle."
-  },
+  },e
   {
     "id": 2565,
     "created": 1428974605,
     "type": 0,
-    "encrypted": false,
     "teaser": "This is the first 40 characters of the whistle."
   }
 ]
@@ -78,7 +74,6 @@ Parameter  | Description
 `id`  | UUIDv4; unique whistle ID - can be used for direct lookup
 `created`  | UNIX timestamp; creation date in UTC time WITH MILLISECONDS
 `type`  | int; `0` for text, `1` for audio, `2` for graphic
-`encrypted`  | bool; if true, indicates that the leak is encrypted with AES-128
 `teaser`  | string; the first 40 characters of the whistle, or a sentence explaining that the whistle is audio or image based.
 
 This endpoint will return HTTP 410 (`GONE`) if there are no more records to be displayed.
@@ -118,7 +113,6 @@ Parameter  | Description
     "id": 2564,
     "created": 1428974705,
     "type": 1,
-    "encrypted": false,
     "content": "/data/ba67de8f40abebd6.mp3"
 }
 ```
@@ -128,7 +122,6 @@ Parameter  | Description
 `id`  | UUIDv4; unique whistle ID - can be used for direct lookup
 `created`  | UNIX timestamp; creation date in UTC time WITH MILLISECONDS
 `type`  | int; `0` for text, `1` for audio, `2` for graphic
-`encrypted`  | bool; if true, indicates that the leak is encrypted with AES-128
 `content`  | if the leak is text, the full text of the leak. If the leak is audio or an image, this will be the URL that the data is accessible at.
 
 This endpoint will return HTTP 404 if there is no such whistle.
@@ -145,7 +138,7 @@ Adds a demo row with dummy data
 
 Parameter  | Description
 ------------- | -------------
-`type`  | type of entry. `1` for unencrypted text, `2` for encrypted text with the key of 8 zeroes, `3` for audio, `4` for graphic. If none is specified, `1` is the default.
+`type`  | type of entry. `1` for text, `3` for audio, `4` for graphic. If none is specified, `1` is the default.
 
 #### Result
 ```JSON
