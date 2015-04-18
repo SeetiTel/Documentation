@@ -138,7 +138,7 @@ Adds a demo row with dummy data
 
 Parameter  | Description
 ------------- | -------------
-`type`  | type of entry. `1` for text, `3` for audio, `4` for graphic. If none is specified, `1` is the default.
+`type`  | type of entry. `1` for text, `2` for audio, `3` for graphic. If none is specified, `1` is the default.
 
 #### Result
 ```JSON
