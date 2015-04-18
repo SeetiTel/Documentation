@@ -2,7 +2,7 @@
 
 The SeetiTel API is a RESTful API, and is designed to use standardized resource URI's and HTTP verbs, with semantic HTTP error response codes to indicate API errors and state.
 
-**All endpoints referenced have the following base: https://seeti.tel/api/v1/**
+**All endpoints referenced have the following base: http://seeti.tel/api/v1/**
 
 ## Quick Reference
 
