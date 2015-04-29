@@ -12,6 +12,8 @@ Request  | Description
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given `phrase`
 `GET /whistle/{id}`  | Returns a full whistle with the given `id`
 `POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
+`POST /whistle/new/text`  | Creates a single whistle with the provided text `data`
+`POST /whistle/new/image`  | Creates a single whistle with the provided text `data`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
@@ -126,6 +128,56 @@ Parameter  | Description
 `content`  | if the leak is text, the full text of the leak. If the leak is audio or an image, this will be the URL that the data is accessible at.
 
 This endpoint will return HTTP 404 if there is no such whistle.
+
+### Create Single Text Whistle
+
+Creates a text whistle
+
+#### Query
+
+`POST /whistle/new/text`
+
+Parameter  | Description
+------------- | -------------
+`data`  | text content of the whistle
+
+#### Result
+```JSON
+{
+    "id": 2564
+}
+```
+
+Parameter  | Description
+------------- | -------------
+`id`  | UUIDv4; unique whistle ID - can be used for direct lookup
+
+This endpoint will return HTTP 201 upon success.
+
+### Create Single Image Whistle
+
+Creates an image whistle
+
+#### Query
+
+`POST /whistle/new/image`
+
+Parameter  | Description
+------------- | -------------
+`data`  | file data of the image
+
+#### Result
+```JSON
+{
+    "id": 2564
+}
+```
+
+Parameter  | Description
+------------- | -------------
+`id`  | UUIDv4; unique whistle ID - can be used for direct lookup
+
+This endpoint will return HTTP 201 upon success.
 
 ## Maintenance
 
