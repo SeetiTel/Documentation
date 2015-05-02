@@ -1,7 +1,9 @@
 ## Core
+* get dummy data system set up
 * create all API endpoints
-* create twilio endpoint
+* create twilio endpoints
 * integrate Twilio
+* figure out storage options
 
 ## Web
 * create viewing system w/ scroll for more (put ID in the url for fast viewing)
