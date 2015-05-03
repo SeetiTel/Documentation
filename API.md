@@ -13,7 +13,7 @@ Request  | Description
 `GET /whistle/{id}`  | Returns a full whistle with the given `id`
 `POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
 `POST /whistle/new/text`  | Creates a single whistle with the provided text `data`
-`POST /whistle/new/image`  | Creates a single whistle with the provided text `data`
+`POST /whistle/new/image`  | Creates a single whistle with the provided image data `data`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
