@@ -26,7 +26,7 @@ This modularity allows for hot swapping capability - front ends, Cores, and Twil
 ![](http://i.imgur.com/TvnKGPi.png)
 
 ### Stack
-SeetiTel Core is built with node.js, using Express for http handling and a hand-written API. SeetiTel Web is build with Bootstrap and jQuery. The Android client is built using a material design card view and utilizes standard Android libraries. The Core development server is a standard VPS, with no remarkable features other than a node installation.
+SeetiTel Core is built with node.js, using Express for http handling and a hand-written API. SeetiTel Web is build with Bootstrap and jQuery. The Android client is built adhereing to the Google Material Design standards and utilizes the `RecyclerView` and `CardView` support libraries. The Core development server is a standard VPS, with no remarkable features other than a node installation.
 
 ## Screenshots
 
