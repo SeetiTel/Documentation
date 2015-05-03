@@ -11,9 +11,8 @@ Request  | Description
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given `phrase`
 `GET /whistle/{id}`  | Returns a full whistle with the given `id`
-`POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
-`POST /whistle/new/text`  | Creates a single whistle with the provided text `data`
-`POST /whistle/new/image`  | Creates a single whistle with the provided image data `data`
+`POST /whistle/demo/`  | Creates a single test whistle with the given `type`
+`POST /whistle/new/`  | Creates a single whistle with the provided type `type` and given data `data`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
@@ -135,36 +134,12 @@ Creates a text whistle
 
 #### Query
 
-`POST /whistle/new/text`
+`POST /whistle/new`
 
 Parameter  | Description
 ------------- | -------------
-`data`  | text content of the whistle
-
-#### Result
-```JSON
-{
-    "id": 2564
-}
-```
-
-Parameter  | Description
-------------- | -------------
-`id`  | UUIDv4; unique whistle ID - can be used for direct lookup
-
-This endpoint will return HTTP 201 upon success.
-
-### Create Single Image Whistle
-
-Creates an image whistle
-
-#### Query
-
-`POST /whistle/new/image`
-
-Parameter  | Description
-------------- | -------------
-`data`  | file data of the image
+`type`  | int; `0` for text, `2` for graphic
+`data`  | text or image content of the whistle
 
 #### Result
 ```JSON
@@ -187,7 +162,7 @@ Adds a demo row with dummy data
 
 #### Query
 
-`POST whistle/demo/{type}`
+`POST whistle/demo/`
 
 Parameter  | Description
 ------------- | -------------
