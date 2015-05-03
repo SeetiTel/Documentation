@@ -11,7 +11,7 @@ Request  | Description
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given `phrase`
 `GET /whistle/{id}`  | Returns a full whistle with the given `id`
-`POST /whistle/demo/`  | Creates a single test whistle with the given `type`
+`POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
 `POST /whistle/new/`  | Creates a single whistle with the provided type `type` and given data `data`
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
@@ -165,7 +165,7 @@ Adds a demo row with dummy data
 
 #### Query
 
-`POST whistle/demo/`
+`POST whistle/demo/{type}`
 
 Parameter  | Description
 ------------- | -------------
