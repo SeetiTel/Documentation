@@ -130,7 +130,7 @@ This endpoint will return HTTP 404 if there is no such whistle.
 
 ### Create Single Text Whistle
 
-Creates a text whistle. Requires `application/x-www-form-urlencoded` form submission.
+Creates a text whistle. Requires `form-data` form submission.
 
 #### Query
 
