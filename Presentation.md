@@ -3,7 +3,7 @@
 	* Why
 	* Business plan
 * Technical 
-	* Distribution
+	* Distribution - rqlite, show graphic
 	* 4 clients + Open API
 	* Demos
 		* Web (Jack)
