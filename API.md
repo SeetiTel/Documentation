@@ -16,6 +16,9 @@ Request  | Description
 `GET /status`  | Returns a DB and API status report
 `DELETE /whistles`  | Flushes all whistles.
 
+`GET /twilio/voice/`  | Twilio voice endpoint (undocumented; just point the Twilio client here)
+`GET /twilio/sms/`  | Twilio sms endpoint (undocumented; just point the Twilio client here)
+
 **Whistle teaser format:**
 ```JSON
 {
