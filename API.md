@@ -8,17 +8,17 @@ The SeetiTel API is a RESTful API, and is designed to use standardized resource 
 
 Request  | Description
 ------------- | -------------
-*Standard Routes*
+**Standard Routes** | 
 `GET /whistles/{offset}`  | Returns an array of 25 teasers, skipping `offset` rows
 `GET /whistles/search/{phrase}`  | Returns an array of teasers that contain the given `phrase`
 `GET /whistle/{id}`  | Returns a full whistle with the given `id`
 `POST /whistle/new/`  | Creates a single whistle with the provided type `type` and given data `data`
-*Maintenance Routes* |
+**Maintenance Routes** | 
 `GET /status`  | Returns a DB and API status report'
 `POST /whistle/demo/{type}`  | Creates a single test whistle with the given `type`
 `DELETE /whistles`  | Flushes all whistles.
 `DELETE /whistle/{id}`  | Flushes whistle with given ID.
-*Twilio Routes* |
+**Twilio Routes** | 
 `GET /twilio/voice/`  | Twilio voice endpoint (undocumented; just point the Twilio client here)
 `GET /twilio/sms/`  | Twilio sms endpoint (undocumented; just point the Twilio client here)
 
