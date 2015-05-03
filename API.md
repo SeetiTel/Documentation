@@ -80,7 +80,7 @@ Parameter  | Description
 
 This endpoint will return HTTP 410 (`GONE`) if there are no more records to be displayed.
 
-### Search 
+### Search
 Returns whistles that contain a given phrase, sorted from most to least recent.
 
 #### Query
@@ -128,7 +128,7 @@ Parameter  | Description
 
 This endpoint will return HTTP 404 if there is no such whistle.
 
-### Create Single Text Whistle
+### Create Single Whistle
 
 Creates a text whistle. Requires `form-data` form submission.
 
