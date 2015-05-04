@@ -3,7 +3,9 @@
 
 <hr />
 Jack Kingsman *Core, Web, API*
+
 Alex Choulos *Android*
+
 Manny Amirtharaj *iOS*
 
 All code is MIT licensed and [released on GitHub](https://github.com/SeetiTel/ "SeetiTel on GitHub").
