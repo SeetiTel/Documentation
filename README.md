@@ -2,7 +2,7 @@
 *seeti: Hindi; "whistle"*
 
 <hr />
-Jack Kingsman *Core, Web, API*
+Jack Kingsman *Architecture, Web, Core*
 
 Alex Choulos *Android*
 
